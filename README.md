@@ -39,7 +39,7 @@ chmod +x miapache
 ls -alh miapache 
 ./miapache stop
 ./miapache status
-  354  ./miapache start
+./miapache start
   355  sudo ./miapache start
   356  sudo ./miapache status
   357  sudo ./miapache stop
