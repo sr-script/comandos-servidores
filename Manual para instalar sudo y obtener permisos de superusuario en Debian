@@ -1,0 +1,20 @@
+Paso 1: Iniciar sesión como root
+Cuando acabas de instalar Debian, el primer paso es iniciar sesión como root. Si ya has iniciado sesión en el sistema, abre una terminal.
+
+Inicia sesión como root:
+su -
+
+
+Paso 2: Instalar sudo
+Para instalar sudo, debes asegurarte de que tu sistema esté actualizado. Primero, actualiza los paquetes disponibles con los siguientes comandos:
+apt update && apt install sudo –y 
+
+Paso 3: Poner que un usuario pueda usarlo:
+usermod  -aG sudo el_usuario 
+
+Paso 4:
+Verificar que se le concedió el permiso de forma correcta: 
+groups el_usuario 
+
+Debería mostrar algo como: 
+el_usuario : el_usuario sudo 
