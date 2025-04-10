@@ -1,0 +1,25 @@
+1. Usar systemctl para obtener el PID de un servicio
+  systemctl status <servicio>
+
+  Ejemplo para el servicio de Apache:
+  systemctl status apache2
+
+2. Usar ps para buscar el PID del servicio
+  ps aux | grep <nombre_del_servicio>
+Ejemplo para Apache:
+  ps aux | grep apache2
+
+3. Usar pgrep para buscar el PID por nombre
+  pgrep <nombre_del_servicio>
+Ejemplo para Apache:
+  pgrep apache2
+
+4. Usar top o htop para ver los procesos en ejecución
+  top
+
+
+Resumen:
+    systemctl status <servicio>: Muestra el PID del servicio.
+    ps aux | grep <servicio>: Busca el PID del servicio en la lista de procesos.
+    pgrep <servicio>: Obtiene el PID directamente por el nombre del servicio.
+    top / htop: Monitoriza los procesos en ejecución y su PID.
