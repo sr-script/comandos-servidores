@@ -1,0 +1,32 @@
+Tutorial crear o eliminar una partición swap en GNU/Linux
+Una partición swap es una partición que actúa como memoria de intercambio, y se usa como si fuera memoria RAM cuando ésta no es suficiente. En este tutorial veremos como crearla en GNU/Linux.
+
+El archivo que tiene la configuración de nuestros discos rígidos y particiones es /etc/fstab. Para saber si tenemos una partición swap en nuestro sistema operativo:
+    cat /proc/swaps
+
+Por ejemplo para crear una partición swap de 512 megas primero creamos un archivo con ese tamaño:
+    sudo dd if=/dev/zero of=/mnt/512MiB.swap bs=1024 count=524288
+
+Damos permisos de leer y escribir solamente a root:
+    sudo chmod 600 /mnt/512MiB.swap
+
+Formatamos el archivo como swap:
+    sudo mkswap /mnt/512MiB.swap
+
+Agregamos la partición al sistema operativo:
+    sudo swapon /mnt/512MiB.swap
+
+Podemos ver que ya está disponible con cat /proc/swaps o cat /proc/meminfo.
+
+Finalmente para hacer los cambios permanentes:
+    sudo vim /etc/fstab
+
+Al final del archivo agregamos esta línea y salvamos los cambios:
+    /mnt/512MiB.swap  none  swap  sw  0 0
+
+Reiniciando el sistema operativo veremos que ya contamos con la nueva memoria swap.
+Para eliminar esa partición swap abrimos el archivo fstab:
+    sudo vim /etc/fstab
+
+Borramos la línea /mnt/512MiB.swap none swap sw 0 0 y salvamos los cambios. Por último removemos la partición swap del sistema operativo y eliminamos el archivo:
+    sudo swapoff /mnt/512MiB.swap && sudo rm /mnt/512MiB.swap
