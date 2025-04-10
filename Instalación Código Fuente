@@ -34,3 +34,15 @@ make
 sudo make install
 sudo /usr/local/miapache/bin/apachectl start
 cd ..
+ls -alh
+chmod +x miapache
+ls -alh miapache 
+./miapache stop
+./miapache status
+./miapache start
+  355  sudo ./miapache start
+  356  sudo ./miapache status
+  357  sudo ./miapache stop
+  358  /usr/local/miapache/bin/apachectl status
+  359  sudo /usr/local/miapache/bin/apachectl status
+  360  micro miapache
