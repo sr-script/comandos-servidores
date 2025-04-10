@@ -1,0 +1,43 @@
+ Comandos para gestionar procesos y demonios en Linux
+
+Ejecutar un comando en segundo plano
+comando &  # Ejecuta el comando en segundo plano
+
+Mover un proceso detenido al fondo
+bg %1  # Mueve el primer proceso detenido al fondo
+
+Mover un proceso del fondo a primer plano
+fg %1  # Trae el primer proceso detenido o en segundo plano a primer plano
+
+Matar un proceso por PID
+kill <PID>  # Para detener un servicio (reemplaza <PID> con el ID del proceso)
+
+Matar un proceso de manera forzada
+kill -9 <PID>  # Para forzar la terminación de un proceso
+
+Ver los procesos en ejecución
+ps aux  # Muestra todos los procesos en ejecución
+
+Ver procesos en tiempo real con una interfaz interactiva
+top  # Muestra procesos en tiempo real
+
+Ejecutar un comando que ignore señales de cierre
+nohup comando &  # Ejecuta el comando en segundo plano sin que se detenga al cerrar la terminal
+
+Iniciar un servicio usando systemd
+sudo systemctl start nombre_del_servicio  # Inicia el servicio especificado
+
+Detener un servicio usando systemd
+sudo systemctl stop nombre_del_servicio  # Detiene el servicio especificado
+
+Reiniciar un servicio usando systemd
+sudo systemctl restart nombre_del_servicio  # Reinicia el servicio especificado
+
+Ver el estado de un servicio usando systemd
+sudo systemctl status nombre_del_servicio  # Muestra el estado del servicio especificado
+
+Habilitar un servicio para que inicie al arranque usando systemd
+sudo systemctl enable nombre_del_servicio  # Habilita el servicio para el arranque automático
+
+Deshabilitar un servicio para que no inicie al arranque usando systemd
+sudo systemctl disable nombre_del_servicio  # Deshabilita el servicio para el arranque automático
