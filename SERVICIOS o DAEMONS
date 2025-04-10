@@ -17,6 +17,15 @@ Ejemplo para Apache:
 4. Usar top o htop para ver los procesos en ejecución
   top
 
+5. Ver procesos en ejecución
+  ps aux
+
+6. Detener un proceso usando su PID
+  kill <PID>
+
+7. Detener un proceso de forma forzada
+  kill -9 <PID>
+
 
 Resumen:
     systemctl status <servicio>: Muestra el PID del servicio.
