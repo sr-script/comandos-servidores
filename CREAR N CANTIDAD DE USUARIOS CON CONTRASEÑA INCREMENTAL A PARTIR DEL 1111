@@ -1,6 +1,10 @@
 #!/bin/bash
 
-# Script para crear N usuarios automáticamente con contraseñas como 1111, 2222, etc.
+# Script para crear N usuarios automáticamente con contraseñas como 1111, 2222, etc. cuando llegue al usuario10 la pass va a ser 10101010 y asi
+#ejemplo de uso
+#darle permisos jejeje chmod +x crear_usuarios_incremental.sh
+#ejecutarlo con el numero de cantidad de usuarios a crear sudo ./crear_usuarios_incremental.sh 5
+
 
 # Verifica que seas root
 if [ "$(id -u)" -ne 0 ]; then
