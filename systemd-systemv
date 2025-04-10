@@ -1,0 +1,23 @@
+66 micro miapache.service  
+
+67 cp miapache.service /etc/systemd/system  
+
+68 sudo cp miapache.service /etc/systemd/system  
+
+69 sudo systemctl daemon-reload  
+
+70 sudo systemctl status miapache.service  
+
+71 sudo systemctl start miapache.service  
+
+72 sudo systemctl status miapache.service  
+
+73 sudo systemctl stop miapache.service  
+
+74 sudo systemctl status miapache.service  
+
+75 sudo systemctl start miapache.service  
+
+76 sudo systemctl status miapache.service  
+
+77 history 
