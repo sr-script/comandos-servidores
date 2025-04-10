@@ -1,0 +1,15 @@
+Paso a paso para cambiar la distribución del teclado en Linux 
+
+    Abre la terminal de línea de comandos con la combinación de teclas Ctrl + Alt + T.
+    Escribe el comando sudo dpkg-reconfigure keyboard-configuration.
+    Selecciona el diseño de teclado que quieras con las teclas de flecha.
+    Presiona Enter para confirmar la selección.
+    Elige la opción predeterminada para tu diseño de teclado.
+    Escribe el comando sudo service keyboard-setup restart. 
+
+Otros comandos para cambiar la distribución del teclado setxkbmap, localectl, loadkeys. 
+Ver la distribución del teclado actual 
+
+    Usa el comando setxkbmap para ver el nombre de la distribución de teclado actual.
+    Usa el comando gkbd-keyboard-display para ver la representación gráfica de la distribución de teclado configurada. 
+
